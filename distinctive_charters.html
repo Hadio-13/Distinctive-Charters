@@ -15,40 +15,125 @@
 	
 	<label>Purpose of Cruise</label>
 	<select id="cruisePurpose" class="dropdown">
-		<option value></option> <!--ADD VALUE FOR EACH OPTION-->
-		<option></option>
-		<option></option>
-		<option></option>
-		<option></option>
-		<option></option>
-		<option></option>
-		<option></option>
+		<option value=""></option> <!--ADD VALUE FOR EACH OPTION-->
+		<option value="Hens/ Stags Do">Hens/ Stags Do</option>
+		<option value="Corporate Event">Corporate Event</option>
+		<option value="Wedding">Wedding</option>
+		<option value="Birthday Celebration">Birthday Celebration</option>
+		<option value="Graduation">Graduation</option>
+		<option value="Anniversary">Anniversary</option>
+		<option value="Christmas function">Christmas function</option>
 	</select>
 	
 	<label>Boat Hire Length</label>
 	<select id="hireLength" class="dropdown">
-		<option data-price value></option> <!--ADD DATA PRICE AND VALUE FOR EACH OPTION-->
-		<option></option>
-		<option></option>
-		<option></option>
-		<option></option>
+		<option data-price="" value=""></option> <!--ADD DATA PRICE AND VALUE FOR EACH OPTION-->
+		<option data-price="2040" value="3 Hours">3 Hours</option>
+		<option data-price="2720" value="4 Hours">4 Hours</option>
+		<option data-price="3400" value="5 Hours">5 Hours</option>
+		<option data-price="4080" value="6 Hours">6 Hours</option>
 	</select>
 	
 	<label>Estimated number of guests</label>
-		<input required="" title="Please enter your estimated number of guests" type="number"><br> <!-- ADD PATTERNS FOR 1-50-->
+		<input required="" title="Please enter your estimated number of guests" pattern="1-50" type="number"><br> <!-- ADD PATTERNS FOR 1-50-->
 		<div id="guestsError" class="errorMessages"></div>
 	
 	<h2>Extras</h2>
 	<p>Why not take the stress out of your visit and add some extra special services on your trip with us!</p>
-		<input class="extrasCheckbox" data-price="0" type="checkbox" value=""><br> <!--ADD DATA PRICE AND VALUE FOR EACH OPTION-->
-		<input class="extrasCheckbox" data-price="0" type="checkbox" value=""><br>
-		<input class="extrasCheckbox" data-price="0" type="checkbox" value=""><br>
-		<input class="extrasCheckbox" data-price="0" type="checkbox" value=""><br>
-		<input class="extrasCheckbox" data-price="0" type="checkbox" value=""><br>
-		<input class="extrasCheckbox" data-price="0" type="checkbox" value=""><br>
-		<input class="extrasCheckbox" data-price="0" type="checkbox" value=""><br>
+		<input class="extrasCheckbox" data-price="2000" type="checkbox" value="Unlimited Drinks Package">Unlimited Drinks Package - $2000<br> <!--ADD DATA PRICE AND VALUE FOR EACH OPTION-->
+		<input class="extrasCheckbox" data-price="350" type="checkbox" value="Catered Snacks">Catered Snacks - $350<br>
+		<input class="extrasCheckbox" data-price="350" type="checkbox" value="DJ">DJ - $350<br>
+		<input class="extrasCheckbox" data-price="50" type="checkbox" value="BYO Food">BYO Food (Service Charge) - $50<br>
+		<input class="extrasCheckbox" data-price="60" type="checkbox" value="Cake">Cake - $60<br>
+		<input class="extrasCheckbox" data-price="650" type="checkbox" value="Overnight Experience">Overnight Experience (Up to 6 people can sleep on board) - $650<br>
+		<input class="extrasCheckbox" data-price="30" type="checkbox" value="Fairy Lights">Fairy Lights - $30<br>
 	<br>
 	
+		<h2>Distinctive Charters Reservations - Time Select</h2>
+	<div class="row">
+		<div class="column">
+			<div class="time_card" data-value="Brunch Charter">
+			  <h3></h3><img alt="brunch charter" src="images/brunch_charter.jpg">
+			  <p></p>
+			  <button class="timeButton" type="button">Book Time</button>
+			</div>
+		</div>
+		
+		<div class="column">
+			<div class="time_card" data-value="Afternoon Delight">
+				<h3></h3><img alt="" src="images/day time.jpg">
+				<p></p>
+				<button class="timeButton" type="button">Book Time</button>
+			</div>
+		</div>
+		
+		<div class="column">
+		  <div class="time_card" data-value="Sunset Sailing">
+				<h3></h3><img alt="" src="images/night.jpg">
+				<p></p>
+			<button class="timeButton" type="button">Book Time</button>
+			</div>
+		</div>
+	</div>
+	
+	<h1>Your Details</h1>
+		<label>First Name:</label>
+			<input autocomplete="on" id="firstNameInput" pattern="[A-Za-z\-']{2,20}" placeholder="John" required="" title="Enter your First Name" type="text"><br>
+	
+		<label>Last Name:</label>
+			<input autocomplete="on" id="lastNameInput" pattern="[A-Za-z\-']{2,20}" placeholder="Smith" required="" title="Enter your Last Name" type="text"><br>
+	
+		<label>NZ Drivers License Number:</label>
+			<input pattern="[A-Z]{2}[0-9]{6}" id="licenseNumber" placeholder="ABXXXXXXX" required="" title="Please enter your license number" type="text"><br>
+	
+		<label>Age:</label>
+<input id="ageInput" pattern="25-130" placeholder="27" required="" title="Please enter your age" type="number"><br>
+	
+		<label>Email:</label>
+			<input id="emailInput" placeholder="John.smith@gmail.com" required="" title="Please enter your email adress" type="email"><br>
+	
+		<label>Cellphone:</label>
+			<input id="cellphoneInput" pattern="02[0-9]\d{6,8}" placeholder="0211041146" required="" title="Please enter cellphone number" type="tel"><br>
+		
+	<label>Comments:</label>
+			<input id="commentsInput" placeholder="Any comments or queries you may have" required="" title="Please enter any comments" type="text"><br>
+	
+	
+	<h2>Reservation Summary</h2>
+	<table>
+		<tr>
+			<td>Sail Date</td>
+			<td id="dateOutput"></td>
+		</tr>
+		<tbody>
+			<tr>
+				<td>Boat Hire Length</td>
+				<td id="hireLengthOutput"></td>
+			</tr>
+			<tr>
+				<td>Sail Time</td>
+				<td id="sailTimeOutput"></td>
+			</tr>
+			<tr>
+				<td>Price for Boat hire</td>
+				<td id="priceOutput"></td>
+			</tr>
+			<tr>
+				<td>Extras</td>
+				<td id="extrasOutput"></td>
+			</tr>
+			<tr>
+				<td>Total</td>
+				<td id="totalCostOutput"></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<label>Do you agree to our terms and conditions?</label>
+		<input id="termsAndConditions" type="checkbox"><br>
+		<button class="submitButton" onclick="pushData()" type="button">Confirm Reservation</button>
+	
 </body>
+	<script src="airtable.browser.js"></script>
 	<script src="distinctive_charters.js"></script>
 </html>
