@@ -15,7 +15,7 @@
 	
 	<label>Purpose of Cruise</label>
 	<select id="cruisePurpose" class="dropdown">
-		<option value=""></option> <!--ADD VALUE FOR EACH OPTION-->
+		<option value=""></option>
 		<option value="Hens/ Stags Do">Hens/ Stags Do</option>
 		<option value="Corporate Event">Corporate Event</option>
 		<option value="Wedding">Wedding</option>
@@ -27,7 +27,7 @@
 	
 	<label>Boat Hire Length</label>
 	<select id="hireLength" class="dropdown">
-		<option data-price="" value=""></option> <!--ADD DATA PRICE AND VALUE FOR EACH OPTION-->
+		<option data-price="" value=""></option>
 		<option data-price="2040" value="3 Hours">3 Hours</option>
 		<option data-price="2720" value="4 Hours">4 Hours</option>
 		<option data-price="3400" value="5 Hours">5 Hours</option>
@@ -35,12 +35,12 @@
 	</select>
 	
 	<label>Estimated number of guests</label>
-		<input required="" title="Please enter your estimated number of guests" pattern="1-50" type="number"><br> <!-- ADD PATTERNS FOR 1-50-->
+		<input required="" title="Please enter your estimated number of guests" pattern="{1,50}" type="number"><br>
 		<div id="guestsError" class="errorMessages"></div>
 	
 	<h2>Extras</h2>
 	<p>Why not take the stress out of your visit and add some extra special services on your trip with us!</p>
-		<input class="extrasCheckbox" data-price="2000" type="checkbox" value="Unlimited Drinks Package">Unlimited Drinks Package - $2000<br> <!--ADD DATA PRICE AND VALUE FOR EACH OPTION-->
+		<input class="extrasCheckbox" data-price="2000" type="checkbox" value="Unlimited Drinks Package">Unlimited Drinks Package - $2000<br>
 		<input class="extrasCheckbox" data-price="350" type="checkbox" value="Catered Snacks">Catered Snacks - $350<br>
 		<input class="extrasCheckbox" data-price="350" type="checkbox" value="DJ">DJ - $350<br>
 		<input class="extrasCheckbox" data-price="50" type="checkbox" value="BYO Food">BYO Food (Service Charge) - $50<br>
@@ -53,24 +53,24 @@
 	<div class="row">
 		<div class="column">
 			<div class="time_card" data-value="Brunch Charter">
-			  <h3></h3><img alt="brunch charter" src="images/brunch_charter.jpg">
-			  <p></p>
+			  <h3>Brunch Charter</h3><img alt="brunch charter" src="images/brunch_charter.jpg">
+			  <p>Experience the ultimate blend of luxury and leisure with our exclusive brunch charter, where stunning views meet gourmet dining on the open water. Perfect for celebrations or a relaxing getaway, our brunch charter offers an unforgettable experience as you cruise along scenic coastlines or tranquil lakes, enjoying a curated menu of brunch favorites. Whether you're toasting a special occasion or simply indulging in a unique outing, our yacht provides the perfect setting for elegance and comfort. Choose the brunch charter for a one-of-a-kind experience that combines breathtaking views, delicious food, and the peaceful ambiance of a day at sea.</p>
 			  <button class="timeButton" type="button">Book Time</button>
 			</div>
 		</div>
 		
 		<div class="column">
 			<div class="time_card" data-value="Afternoon Delight">
-				<h3></h3><img alt="" src="images/day time.jpg">
-				<p></p>
+				<h3>Afternoon Delight</h3><img alt="afternoon delight" src="images/day time.jpg">
+				<p>Indulge in the perfect escape with our Afternoon Delight charter, where luxury and relaxation blend seamlessly for an unforgettable day on the water. Imagine lounging on a sun-kissed deck, sipping your favorite drink as you soak in the breathtaking scenery. Whether you're celebrating a special moment or just craving a break from the everyday, this afternoon charter offers the ideal combination of sun, sea, and serenity. With customizable options, including light bites, music, and even water activities, the Afternoon Delight charter promises a blissful retreat that leaves you refreshed and rejuvenated.</p>
 				<button class="timeButton" type="button">Book Time</button>
 			</div>
 		</div>
 		
 		<div class="column">
 		  <div class="time_card" data-value="Sunset Sailing">
-				<h3></h3><img alt="" src="images/night.jpg">
-				<p></p>
+				<h3>Sunset Sailing</h3><img alt="sunset sailing" src="images/night.jpg">
+				<p>Embrace the magic of golden hour with our Sunset Sailing charter, where the beauty of the setting sun meets the tranquility of the open water. Perfect for couples, friends, or anyone looking to unwind, this serene experience offers front-row seats to nature's most stunning display. As you sail along, enjoy the gentle breeze and a glass of champagne while watching the sky transition from vibrant hues to twilight. Whether for a romantic evening, a special celebration, or a peaceful escape, our Sunset Sailing charter promises an unforgettable journey that ends with the perfect view.</p>
 			<button class="timeButton" type="button">Book Time</button>
 			</div>
 		</div>
@@ -87,7 +87,7 @@
 			<input pattern="[A-Z]{2}[0-9]{6}" id="licenseNumber" placeholder="ABXXXXXXX" required="" title="Please enter your license number" type="text"><br>
 	
 		<label>Age:</label>
-<input id="ageInput" pattern="25-130" placeholder="27" required="" title="Please enter your age" type="number"><br>
+<input id="ageInput" pattern="{25-130}" placeholder="27" required="" title="Please enter your age" type="number"><br>
 	
 		<label>Email:</label>
 			<input id="emailInput" placeholder="John.smith@gmail.com" required="" title="Please enter your email adress" type="email"><br>
