@@ -26,16 +26,16 @@
 	</select>
 	
 	<label>Boat Hire Length</label>
-	<select id="hireLength" class="dropdown">
+	<select id="boatHireLength" class="dropdown">
 		<option data-price="" value=""></option>
-		<option data-price="2040" value="3 Hours">3 Hours</option>
-		<option data-price="2720" value="4 Hours">4 Hours</option>
-		<option data-price="3400" value="5 Hours">5 Hours</option>
-		<option data-price="4080" value="6 Hours">6 Hours</option>
+		<option data-price="2040" value="3">3 Hours</option>
+		<option data-price="2720" value="4">4 Hours</option>
+		<option data-price="3400" value="5">5 Hours</option>
+		<option data-price="4080" value="6">6 Hours</option>
 	</select>
 	
 	<label>Estimated number of guests</label>
-		<input required="" title="Please enter your estimated number of guests" pattern="{1,50}" type="number"><br>
+		<input required="" title="Please enter your estimated number of guests" min="1" max="50" type="number"><br>
 		<div id="guestsError" class="errorMessages"></div>
 	
 	<h2>Extras</h2>
@@ -87,7 +87,7 @@
 			<input pattern="[A-Z]{2}[0-9]{6}" id="licenseNumber" placeholder="ABXXXXXXX" required="" title="Please enter your license number" type="text"><br>
 	
 		<label>Age:</label>
-<input id="ageInput" pattern="{25-130}" placeholder="27" required="" title="Please enter your age" type="number"><br>
+<input id="ageInput" min="25" max="130" placeholder="27" required="" title="Please enter your age" type="number"><br>
 	
 		<label>Email:</label>
 			<input id="emailInput" placeholder="John.smith@gmail.com" required="" title="Please enter your email adress" type="email"><br>
