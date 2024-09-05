@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Distinctive Charters</title>
 <link href="base_style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -26,16 +26,10 @@
 	</select>
 	
 	<label>Boat Hire Length</label>
-	<select id="boatHireLength" class="dropdown">
-		<option data-price="" value=""></option>
-		<option data-price="2040" value="3">3 Hours</option>
-		<option data-price="2720" value="4">4 Hours</option>
-		<option data-price="3400" value="5">5 Hours</option>
-		<option data-price="4080" value="6">6 Hours</option>
-	</select>
+		<input id="boatHireLength" required="" max="6" min="3" placeholder="3 - 6" title="Please enter the desired boat hire length" type="number">
 	
 	<label>Estimated number of guests</label>
-		<input required="" title="Please enter your estimated number of guests" min="1" max="50" type="number"><br>
+		<input required="" title="Please enter your estimated number of guests" min="1" max="50" type="number" placeholder="1 - 50"><br>
 		<div id="guestsError" class="errorMessages"></div>
 	
 	<h2>Extras</h2>
@@ -53,7 +47,7 @@
 	<div class="row">
 		<div class="column">
 			<div class="time_card" data-value="Brunch Charter">
-			  <h3>Brunch Charter</h3><img alt="brunch charter" src="images/brunch_charter.jpg">
+			  <h3>Brunch Charter - 11am</h3><img alt="brunch charter" src="images/brunch_charter.jpg">
 			  <p>Experience the ultimate blend of luxury and leisure with our exclusive brunch charter, where stunning views meet gourmet dining on the open water. Perfect for celebrations or a relaxing getaway, our brunch charter offers an unforgettable experience as you cruise along scenic coastlines or tranquil lakes, enjoying a curated menu of brunch favorites. Whether you're toasting a special occasion or simply indulging in a unique outing, our yacht provides the perfect setting for elegance and comfort. Choose the brunch charter for a one-of-a-kind experience that combines breathtaking views, delicious food, and the peaceful ambiance of a day at sea.</p>
 			  <button class="timeButton" type="button">Book Time</button>
 			</div>
@@ -61,7 +55,7 @@
 		
 		<div class="column">
 			<div class="time_card" data-value="Afternoon Delight">
-				<h3>Afternoon Delight</h3><img alt="afternoon delight" src="images/day time.jpg">
+				<h3>Afternoon Delight - 3pm</h3><img alt="afternoon delight" src="images/day time.jpg">
 				<p>Indulge in the perfect escape with our Afternoon Delight charter, where luxury and relaxation blend seamlessly for an unforgettable day on the water. Imagine lounging on a sun-kissed deck, sipping your favorite drink as you soak in the breathtaking scenery. Whether you're celebrating a special moment or just craving a break from the everyday, this afternoon charter offers the ideal combination of sun, sea, and serenity. With customizable options, including light bites, music, and even water activities, the Afternoon Delight charter promises a blissful retreat that leaves you refreshed and rejuvenated.</p>
 				<button class="timeButton" type="button">Book Time</button>
 			</div>
@@ -69,12 +63,13 @@
 		
 		<div class="column">
 		  <div class="time_card" data-value="Sunset Sailing">
-				<h3>Sunset Sailing</h3><img alt="sunset sailing" src="images/night.jpg">
+				<h3>Sunset Sailing - 7pm</h3><img alt="sunset sailing" src="images/night.jpg">
 				<p>Embrace the magic of golden hour with our Sunset Sailing charter, where the beauty of the setting sun meets the tranquility of the open water. Perfect for couples, friends, or anyone looking to unwind, this serene experience offers front-row seats to nature's most stunning display. As you sail along, enjoy the gentle breeze and a glass of champagne while watching the sky transition from vibrant hues to twilight. Whether for a romantic evening, a special celebration, or a peaceful escape, our Sunset Sailing charter promises an unforgettable journey that ends with the perfect view.</p>
 			<button class="timeButton" type="button">Book Time</button>
 			</div>
 		</div>
 	</div>
+	
 	
 	<h1>Your Details</h1>
 		<label>First Name:</label>
