@@ -2,39 +2,39 @@
 alert("js is attached gangg")
 // Airtable stuff - appL3oA7I7nOX3bfD
 // Airtable token - patxNxYkDY7srtvjJ.41c075fe1be034bd2cc8a3263f8b757cbb59634798d68b161a0115383e34eab0
-function boatHireDate() {
-	var totalCost = 0;
+function boatHireDate() { //Creating function for the date of the boat hire
+	var totalCost = 0; // creating variable for the total cost before any choices
 	alert("charter reservation function");
-	var boatHireDate = document.getElementById("boatHireDate").value;
-	alert(boatHireDate);
-	var boatHireLength = document.getElementById("boatHireLength").value;
-	alert(boatHireLength);
-	var timeSelect = this.dataset.value;
-	alert(timeSelect);
-	if (document.getElementById("boatHireDate").validity.valueMissing) {
-		alert("date not selected");
-		document.getElementById("boatHireDate").scrollIntoView();
-		document.getElementById("dateError").innerHTML = "Please enter in a date";
+	var boatHireDate = document.getElementById("boatHireDate").value; //creating variable for boat hire date
+	alert(boatHireDate); //calling boat hire date
+	var boatHireLength = document.getElementById("boatHireLength").value; //creating variable for boat hire length
+	alert(boatHireLength); // calling variable
+	var timeSelect = this.dataset.value; //creating variable for time select
+	alert(timeSelect); //calling variable
+	if (document.getElementById("boatHireDate").validity.valueMissing) { //checking to see that a boat hire date has been entered
+		alert("date not selected"); //alert if no date has been selected
+		document.getElementById("boatHireDate").scrollIntoView(); //scrolls the user to the boat hire date
+		document.getElementById("dateError").innerHTML = "Please enter in a date"; //message on the page to show user they have not entered a valid date
 		return;
 	}
-	if (document.getElementById("boatHireLength").validity.rangeUnderflow || document.getElementById("boatHireLength").validity.rangeOverflow || document.getElementById("boatHireLength").validity.valueMissing) {
-		alert("Please select number of nights");
-		document.getElementById("boatHireLength").scrollIntoView();
-		document.getElementById("boatHireLengthError").innerHTML = "Please enter in a valid number of hours for hire";
+	if (document.getElementById("boatHireLength").validity.rangeUnderflow || document.getElementById("boatHireLength").validity.rangeOverflow || document.getElementById("boatHireLength").validity.valueMissing) { //checking that the boat hire date is within a specific timeline
+		alert("Please select boat hire length"); //tells user to enter a valid boat hire length
+		document.getElementById("boatHireLength").scrollIntoView(); //scrolls user to boat hire length
+		document.getElementById("boatHireLengthError").innerHTML = "Please enter in a valid number of hours for hire"; //message on thw webpage to tell user to enter a valid boat hire length
 		return;
 	}
-	if (timeSelect == null) {
-		alert("time not selected");
-		document.getElementById("timeSelect").scrollIntoView();
-		timeError.innerHTML = "Please select a time to continue";
+	if (timeSelect == null) { //checking that a time has been selected
+		alert("time not selected"); //tells user time has not been selected
+		document.getElementById("timeSelect").scrollIntoView(); //scrolls user to the time select
+		timeError.innerHTML = "Please select a time to continue"; //message on the webpage
 		return;
 	}
-	var boatHirePrice = 680;
-	var priceForHire = (boatHirePrice * boatHireLength);
-	totalCost += Number(priceForHire);
-	extraOptions = [];
-	var addExtras = document.getElementsByClassName("extrasCheckbox");
-	var extrasCost = 0;
+	var boatHirePrice = 680; //creating variable for boat hire price
+	var priceForHire = (boatHirePrice * boatHireLength); ////creating variable for  price for hire
+	totalCost += Number(priceForHire); //calling the total cost of the boat hire
+	extraOptions = []; //extras
+	var addExtras = document.getElementsByClassName("extrasCheckbox"); //checking which extras boxes have been checked
+	var extrasCost = 0; //begining extras cost
 	for (i = 0; i < addExtras.length; i++) {
 		if (addExtras[i].type == "checkbox") {
 			if (addExtras[i].checked) {
@@ -45,25 +45,25 @@ function boatHireDate() {
 			}
 		}
 	}
-	totalCost = Number(priceForHire + extrasCost);
-	alert("total cost" + totalCost);
-	document.getElementById("dateOutput").scrollIntoView();
-	outputSummary(boatHireDate, boatHireLength, timeSelect, priceForHire, extrasCost, totalCost);
+	totalCost = Number(priceForHire + extrasCost); //total cost accounting for boat hire and extras
+	alert("total cost" + totalCost); //alerts the total
+	document.getElementById("dateOutput").scrollIntoView(); //scrolls to the date output
+	outputSummary(boatHireDate, boatHireLength, timeSelect, priceForHire, extrasCost, totalCost); //variables that will be outputted
 }
 
-function outputSummary(boatHireDate, boatHireLength, timeSelect, priceForHire, extrasCost, totalCost) {
-	alert("Push data function");
-	alert(timeSelect);
-	document.getElementById("dateOutput").innerHTML = boatHireDate;
-	document.getElementById("hireLengthOutput").innerHTML = boatHireLength;
-	document.getElementById("sailTimeOutput").innerHTML = timeSelect;
-	document.getElementById("priceOutput").innerHTML = "$" + priceForHire;
-	document.getElementById("extrasOutput").innerHTML = "$" + extrasCost;
-	document.getElementById("totalCostOutput").innerHTML = "$" + totalCost;
+function outputSummary(boatHireDate, boatHireLength, timeSelect, priceForHire, extrasCost, totalCost) { //creating function for the output
+	alert("Push data function"); //alert
+	alert(timeSelect); //alerts time selected
+	document.getElementById("dateOutput").innerHTML = boatHireDate; //alerts variable
+	document.getElementById("hireLengthOutput").innerHTML = boatHireLength; //alerts variable
+	document.getElementById("sailTimeOutput").innerHTML = timeSelect; //alerts variable
+	document.getElementById("priceOutput").innerHTML = "$" + priceForHire; //alerts variable
+	document.getElementById("extrasOutput").innerHTML = "$" + extrasCost; //alerts variable
+	document.getElementById("totalCostOutput").innerHTML = "$" + totalCost; //alerts variable
 	checkDetails(boatHireDate, boatHireLength, timeSelect, priceForHire, extrasCost, totalCost)
 }
 
-function checkPattern(input, output, errorMessage) {
+function checkPattern(input, output, errorMessage) { //function to check that inputs are valid
 	alert("check pattern function");
 	if (input.validity.patternMismatch || input.validity.valueMissing) {
 		alert("incorrect name");
@@ -80,7 +80,7 @@ function checkDetails(boatHireDate, boatHireLength, timeSelect, priceForHire, ex
 	if (termsAndConditions.checked) {
 		alert("Terms checked");
 		alert("Total in CheckDetails: " + totalCost);
-		//alert("purpose in Checkdetails: " + purpose);
+		alert("purpose in Checkdetails: " + purpose);
 		var firstName = checkPattern(firstNameInput, errorFirstName, "Please enter a valid first name");
 		if (firstName == true) {
 			alert("first name has been checked and recieved by checkdetails");
@@ -100,7 +100,8 @@ function checkDetails(boatHireDate, boatHireLength, timeSelect, priceForHire, ex
 	}
 }
 
-function pushData(firstNameInput, lastNameInput, boatHireDate, boatHireLength, extraOptions, timeSelect, priceForHire, extrasCost, totalCost) {
+function pushData(firstNameInput, lastNameInput, boatHireDate, boatHireLength, extraOptions, timeSelect, priceForHire, extrasCost, totalCost) { //function for pushing info to airtable
+	alert(firstNameInput);
 	alert("At the confirm function");
 	console.log("myFunction fired.");
 	console.log("Getting Values....");
@@ -110,22 +111,22 @@ function pushData(firstNameInput, lastNameInput, boatHireDate, boatHireLength, e
 		apiKey: 'patxNxYkDY7srtvjJ.41c075fe1be034bd2cc8a3263f8b757cbb59634798d68b161a0115383e34eab0' }).base('appL3oA7I7nOX3bfD');
 	console.log("Creating a record....");
 	base('Reservations').create({
-			"First Name": firstNameInput,
-			"Last Name": lastNameInput,
-			"Drivers License": "AB123456",
-			"Age": "131",
-			"Cellphone": "911",
-			"Email": "lol@mail.com",
-			"Comments": "yes",
-			"Hire Date": boatHireDate,
-			"Cruise Purpose": "FuN",
-			"Hire Length": boatHireLength,
-			"Number of Guests": "22 billion",
-			"Extras": extraOptions,
-			"Time of Hire": timeSelect,
-			"Price For Hire": priceForHire,
-			"Extras Cost": extrasCost,
-			"Total Cost": totalCost
+			"First Name": firstNameInput, //variable getting pushed to airtable
+			"Last Name": lastNameInput, //variable getting pushed to airtable
+			"Drivers License": "AB123456", //variable getting pushed to airtable
+			"Age": "131", //variable getting pushed to airtable
+			"Cellphone": "911", //variable getting pushed to airtable
+			"Email": "lol@mail.com", //variable getting pushed to airtable
+			"Comments": "yes", //variable getting pushed to airtable
+			"Hire Date": boatHireDate, //variable getting pushed to airtable
+			"Cruise Purpose": "FuN", //variable getting pushed to airtable
+			"Hire Length": boatHireLength, //variable getting pushed to airtable
+			"Number of Guests": "22 billion", //variable getting pushed to airtable
+			"Extras": extraOptions, //variable getting pushed to airtable
+			"Time of Hire": timeSelect, //variable getting pushed to airtable
+			"Price For Hire": priceForHire, //variable getting pushed to airtable
+			"Extras Cost": extrasCost, //variable getting pushed to airtable
+			"Total Cost": totalCost //variable getting pushed to airtable
 		}, {
 			typecast: true
 		}, //gets the API to convert types instead of parsing everything as strings.

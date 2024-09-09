@@ -7,14 +7,14 @@
 </head>
 
 <body>
-	<h1>Distinctive Charters</h1>
+	<h1>Distinctive Charters</h1><!--Title of page-->
 	
-	<label>Boat Hire Date</label>
-		<input id="boatHireDate" required="" title="Please enter your wanted hire date" type="date"><br>
-		<div id="dateError" class="errorMessages"></div>
+	<label>Boat Hire Date</label><!--subsection for date of hire-->
+		<input id="boatHireDate" required="" title="Please enter your wanted hire date" type="date"><br> <!--date input-->
+		<div id="dateError" class="errorMessages"></div><!--error message for a not valid date-->
 	
-	<label>Purpose of Cruise</label>
-	<select id="cruisePurpose" class="dropdown">
+	<label>Purpose of Cruise</label><!--subsection for purpose of cruise-->
+	<select id="cruisePurpose" class="dropdown"> <!--dropdown box with options-->
 		<option value=""></option>
 		<option value="Hens/ Stags Do">Hens/ Stags Do</option>
 		<option value="Corporate Event">Corporate Event</option>
@@ -25,16 +25,16 @@
 		<option value="Christmas function">Christmas function</option>
 	</select>
 	
-	<label>Boat Hire Length</label>
-		<input id="boatHireLength" required="" max="6" min="3" placeholder="3 - 6" title="Please enter the desired boat hire length" type="number">
+	<label>Boat Hire Length</label><!--subsection for boat hire length-->
+		<input id="boatHireLength" required="" max="6" min="3" placeholder="3 - 6" title="Please enter the desired boat hire length" type="number"><!--number input limited from 3 to 6-->
 	
-	<label>Estimated number of guests</label>
-		<input required="" title="Please enter your estimated number of guests" min="1" max="50" type="number" placeholder="1 - 50"><br>
-		<div id="guestsError" class="errorMessages"></div>
+	<label>Estimated number of guests</label><!--subsection for estimated number of guests-->
+		<input required="" title="Please enter your estimated number of guests" min="1" max="50" type="number" placeholder="1 - 50"><br><!--number inpt limited from 1 to 50 guests-->
+		<div id="guestsError" class="errorMessages"></div><!--error message for not valid number of guests-->
 	
-	<h2>Extras</h2>
-	<p>Why not take the stress out of your visit and add some extra special services on your trip with us!</p>
-		<input class="extrasCheckbox" data-price="2000" type="checkbox" value="Unlimited Drinks Package">Unlimited Drinks Package - $2000<br>
+	<h2>Extras</h2><!--extras section-->
+	<p>Why not take the stress out of your visit and add some extra special services on your trip with us!</p><!--sum waffle-->
+		<input class="extrasCheckbox" data-price="2000" type="checkbox" value="Unlimited Drinks Package">Unlimited Drinks Package - $2000<br><!--checkboxes for extras-->
 		<input class="extrasCheckbox" data-price="350" type="checkbox" value="Catered Snacks">Catered Snacks - $350<br>
 		<input class="extrasCheckbox" data-price="350" type="checkbox" value="DJ">DJ - $350<br>
 		<input class="extrasCheckbox" data-price="50" type="checkbox" value="BYO Food">BYO Food (Service Charge) - $50<br>
@@ -43,7 +43,7 @@
 		<input class="extrasCheckbox" data-price="30" type="checkbox" value="Fairy Lights">Fairy Lights - $30<br>
 	<br>
 	
-		<h2>Distinctive Charters Reservations - Time Select</h2>
+		<h2>Distinctive Charters Reservations - Time Select</h2><!--section with cards for the desired time the person wants to hire at-->
 	<div class="row">
 		<div class="column">
 			<div class="time_card" data-value="Brunch Charter">
@@ -71,55 +71,55 @@
 	</div>
 	
 	
-	<h1>Your Details</h1>
-		<label>First Name:</label>
-			<input autocomplete="on" id="firstNameInput" pattern="[A-Za-z\-']{2,20}" placeholder="John" required="" title="Enter your First Name" type="text"><br>
+	<h1>Your Details</h1><!--section for details-->
+		<label>First Name:</label><!--firt name input-->
+			<input autocomplete="on" id="firstNameInput" pattern="[A-Za-z\-']{2,20}" placeholder="John" required="" title="Enter your First Name" type="text"><br><!--first name input with patterns so no numbers are allowed and the name can only be 2 to 20 characters long-->
 	
-		<label>Last Name:</label>
-			<input autocomplete="on" id="lastNameInput" pattern="[A-Za-z\-']{2,20}" placeholder="Smith" required="" title="Enter your Last Name" type="text"><br>
+		<label>Last Name:</label><!--last name input-->
+			<input autocomplete="on" id="lastNameInput" pattern="[A-Za-z\-']{2,20}" placeholder="Smith" required="" title="Enter your Last Name" type="text"><br><!--last name input with same patterns as first name-->
 	
 		<label>NZ Drivers License Number:</label>
-			<input pattern="[A-Z]{2}[0-9]{6}" id="licenseNumber" placeholder="ABXXXXXXX" required="" title="Please enter your license number" type="text"><br>
+			<input pattern="[A-Z]{2}[0-9]{6}" id="licenseNumber" placeholder="ABXXXXXXX" required="" title="Please enter your license number" type="text"><br><!--drivers license number with patterns so it can only be in license number format-->
 	
 		<label>Age:</label>
-<input id="ageInput" min="25" max="130" placeholder="27" required="" title="Please enter your age" type="number"><br>
+<input id="ageInput" min="25" max="130" placeholder="27" required="" title="Please enter your age" type="number"><br><!--age input from 25 to 130 so no one can be younger then 25 or older then 130-->
 	
 		<label>Email:</label>
-			<input id="emailInput" placeholder="John.smith@gmail.com" required="" title="Please enter your email adress" type="email"><br>
+			<input id="emailInput" placeholder="John.smith@gmail.com" required="" title="Please enter your email adress" type="email"><br><!--email input-->
 	
 		<label>Cellphone:</label>
-			<input id="cellphoneInput" pattern="02[0-9]\d{6,8}" placeholder="0211041146" required="" title="Please enter cellphone number" type="tel"><br>
+			<input id="cellphoneInput" pattern="02[0-9]\d{6,8}" placeholder="0211041146" required="" title="Please enter cellphone number" type="tel"><br><!--cellphone input with patterns so a real phone number is needed-->
 		
 	<label>Comments:</label>
-			<input id="commentsInput" placeholder="Any comments or queries you may have" required="" title="Please enter any comments" type="text"><br>
+			<input id="commentsInput" placeholder="Any comments or queries you may have" required="" title="Please enter any comments" type="text"><br><!--any additional comments-->
 	
 	
-	<h2>Reservation Summary</h2>
+	<h2>Reservation Summary</h2> <!--reservation summary table-->
 	<table>
 		<tr>
 			<td>Sail Date</td>
-			<td id="dateOutput"></td>
+			<td id="dateOutput"></td><!--sail date output in the output table-->
 		</tr>
 		<tbody>
 			<tr>
 				<td>Boat Hire Length</td>
-				<td id="hireLengthOutput"></td>
+				<td id="hireLengthOutput"></td><!--sail date output in the output table-->
 			</tr>
 			<tr>
 				<td>Sail Time</td>
-				<td id="sailTimeOutput"></td>
+				<td id="sailTimeOutput"></td><!--sail time output in the output table-->
 			</tr>
 			<tr>
 				<td>Price for Boat hire</td>
-				<td id="priceOutput"></td>
+				<td id="priceOutput"></td><!--price for boat hire output in the output table-->
 			</tr>
 			<tr>
 				<td>Extras</td>
-				<td id="extrasOutput"></td>
+				<td id="extrasOutput"></td><!--Extras output in the output table-->
 			</tr>
 			<tr>
 				<td>Total</td>
-				<td id="totalCostOutput"></td>
+				<td id="totalCostOutput"></td><!--total cost output in the output table-->
 			</tr>
 		</tbody>
 	</table>
