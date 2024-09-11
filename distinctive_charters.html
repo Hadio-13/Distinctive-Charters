@@ -5,14 +5,16 @@
 <title>Distinctive Charters</title>
 <link href="base_style.css" rel="stylesheet" type="text/css">
 </head>
-
+	
 <body>
+	
 	<h1>Distinctive Charters</h1><!--Title of page-->
 	
 	<label>Boat Hire Date</label><!--subsection for date of hire-->
 		<input id="boatHireDate" required="" title="Please enter your wanted hire date" type="date"><br> <!--date input-->
 		<div id="dateError" class="errorMessages"></div><!--error message for a not valid date-->
-	
+	<br>
+
 	<label>Purpose of Cruise</label><!--subsection for purpose of cruise-->
 	<select id="cruisePurpose" class="dropdown"> <!--dropdown box with options-->
 		<option value=""></option>
@@ -24,12 +26,17 @@
 		<option value="Anniversary">Anniversary</option>
 		<option value="Christmas function">Christmas function</option>
 	</select>
+	     <div id="purposeError" class="error_messages"></div>
+
 	
 	<label>Boat Hire Length</label><!--subsection for boat hire length-->
 		<input id="boatHireLength" required="" max="6" min="3" placeholder="3 - 6" title="Please enter the desired boat hire length" type="number"><!--number input limited from 3 to 6-->
+		<div id="boatHireLengthError" class="errorMessages"></div><!--error message for a not valid date-->
+<br>
+
 	
 	<label>Estimated number of guests</label><!--subsection for estimated number of guests-->
-		<input required="" title="Please enter your estimated number of guests" min="1" max="50" type="number" placeholder="1 - 50"><br><!--number inpt limited from 1 to 50 guests-->
+		<input id="numberOfGuests" required="" title="Please enter your estimated number of guests" min="1" max="50" type="number" placeholder="1 - 50"><br><!--number inpt limited from 1 to 50 guests-->
 		<div id="guestsError" class="errorMessages"></div><!--error message for not valid number of guests-->
 	
 	<h2>Extras</h2><!--extras section-->
@@ -43,21 +50,20 @@
 		<input class="extrasCheckbox" data-price="30" type="checkbox" value="Fairy Lights">Fairy Lights - $30<br>
 	<br>
 	
+	
 		<h2>Distinctive Charters Reservations - Time Select</h2><!--section with cards for the desired time the person wants to hire at-->
 	<div class="row">
 		<div class="column">
 			<div class="time_card" data-value="Brunch Charter">
 			  <h3>Brunch Charter - 11am</h3><img alt="brunch charter" src="images/brunch_charter.jpg">
 			  <p>Experience the ultimate blend of luxury and leisure with our exclusive brunch charter, where stunning views meet gourmet dining on the open water. Perfect for celebrations or a relaxing getaway, our brunch charter offers an unforgettable experience as you cruise along scenic coastlines or tranquil lakes, enjoying a curated menu of brunch favorites. Whether you're toasting a special occasion or simply indulging in a unique outing, our yacht provides the perfect setting for elegance and comfort. Choose the brunch charter for a one-of-a-kind experience that combines breathtaking views, delicious food, and the peaceful ambiance of a day at sea.</p>
-			  <button class="timeButton" type="button">Book Time</button>
 			</div>
 		</div>
 		
 		<div class="column">
 			<div class="time_card" data-value="Afternoon Delight">
-				<h3>Afternoon Delight - 3pm</h3><img alt="afternoon delight" src="images/day time.jpg">
+				<h3>Afternoon Delight - 3pm</h3><img alt="afternoon delight" src="images/day_time.jpg">
 				<p>Indulge in the perfect escape with our Afternoon Delight charter, where luxury and relaxation blend seamlessly for an unforgettable day on the water. Imagine lounging on a sun-kissed deck, sipping your favorite drink as you soak in the breathtaking scenery. Whether you're celebrating a special moment or just craving a break from the everyday, this afternoon charter offers the ideal combination of sun, sea, and serenity. With customizable options, including light bites, music, and even water activities, the Afternoon Delight charter promises a blissful retreat that leaves you refreshed and rejuvenated.</p>
-				<button class="timeButton" type="button">Book Time</button>
 			</div>
 		</div>
 		
@@ -65,30 +71,46 @@
 		  <div class="time_card" data-value="Sunset Sailing">
 				<h3>Sunset Sailing - 7pm</h3><img alt="sunset sailing" src="images/night.jpg">
 				<p>Embrace the magic of golden hour with our Sunset Sailing charter, where the beauty of the setting sun meets the tranquility of the open water. Perfect for couples, friends, or anyone looking to unwind, this serene experience offers front-row seats to nature's most stunning display. As you sail along, enjoy the gentle breeze and a glass of champagne while watching the sky transition from vibrant hues to twilight. Whether for a romantic evening, a special celebration, or a peaceful escape, our Sunset Sailing charter promises an unforgettable journey that ends with the perfect view.</p>
-			<button class="timeButton" type="button">Book Time</button>
 			</div>
 		</div>
 	</div>
+	
+	<h2>Select Charter Time</h2>
+	<select id="timeSelect" class="dropdown">
+        <option value=""></option>
+        <option value="Brunch Charter"> Brunch Charter - 11 a.m. </option>
+        <option value="Afternoon Delight"> Afternoon Delight - 3 p.m. </option>
+        <option value="Sunset Sailing"> Sunset Sailing - 7 p.m. </option>
+      </select>
+	<div id="timeError" class="error_messages"></div>
+
 	
 	
 	<h1>Your Details</h1><!--section for details-->
 		<label>First Name:</label><!--firt name input-->
 			<input autocomplete="on" id="firstNameInput" pattern="[A-Za-z\-']{2,20}" placeholder="John" required="" title="Enter your First Name" type="text"><br><!--first name input with patterns so no numbers are allowed and the name can only be 2 to 20 characters long-->
+	<div id="firstNameError" class="error_messages"></div>
+
 	
 		<label>Last Name:</label><!--last name input-->
 			<input autocomplete="on" id="lastNameInput" pattern="[A-Za-z\-']{2,20}" placeholder="Smith" required="" title="Enter your Last Name" type="text"><br><!--last name input with same patterns as first name-->
+	<div id="lastNameError" class="error_messages"></div>
 	
 		<label>NZ Drivers License Number:</label>
 			<input pattern="[A-Z]{2}[0-9]{6}" id="licenseNumber" placeholder="ABXXXXXXX" required="" title="Please enter your license number" type="text"><br><!--drivers license number with patterns so it can only be in license number format-->
+	<div id="licenseError" class="error_messages"></div>
 	
 		<label>Age:</label>
-<input id="ageInput" min="25" max="130" placeholder="27" required="" title="Please enter your age" type="number"><br><!--age input from 25 to 130 so no one can be younger then 25 or older then 130-->
+			<input id="ageInput" min="25" max="130" placeholder="27" required="" title="Please enter your age" type="number"><br><!--age input from 25 to 130 so no one can be younger then 25 or older then 130-->
+	<div id="ageError" class="error_messages"></div>
 	
 		<label>Email:</label>
 			<input id="emailInput" placeholder="John.smith@gmail.com" required="" title="Please enter your email adress" type="email"><br><!--email input-->
+	<div id="emailError" class="error_messages"></div>
 	
 		<label>Cellphone:</label>
 			<input id="cellphoneInput" pattern="02[0-9]\d{6,8}" placeholder="0211041146" required="" title="Please enter cellphone number" type="tel"><br><!--cellphone input with patterns so a real phone number is needed-->
+	<div id="cellphoneError" class="error_messages"></div>
 		
 	<label>Comments:</label>
 			<input id="commentsInput" placeholder="Any comments or queries you may have" required="" title="Please enter any comments" type="text"><br><!--any additional comments-->
@@ -126,9 +148,15 @@
 	
 	<label>Do you agree to our terms and conditions?</label>
 		<input id="termsAndConditions" type="checkbox"><br>
-		<button class="submitButton" onclick="pushData()" type="button">Confirm Reservation</button>
+		<button class="submitButton" onclick="checkDetails()" type="button">Confirm Reservation</button>
+	<footer>
+      <img src="images/distinctive_chaters_white_logo.png" alt="distinctive charters logo">
+      	<br>Distinctive Charters 
+		<br>Site devoloped and maintained by Hadi Obaidullah©
+    </footer>
 	
-</body>
 	<script src="airtable.browser.js"></script>
 	<script src="distinctive_charters.js"></script>
+</body>
+	
 </html>
