@@ -63,7 +63,7 @@ var totalCost = 0; // creating variable for the total cost before any choices
     if (document.getElementById("boatHireLength").validity.rangeUnderflow || document.getElementById("boatHireLength").validity.rangeOverflow || document.getElementById("boatHireLength").validity.valueMissing) { //checking that the boat hire date is within a specific timeline
         alert("Please select boat hire length"); //tells user to enter a valid boat hire length
         document.getElementById("boatHireLength").scrollIntoView(); //scrolls user to boat hire length
-        document.getElementById("boatHireLengthError").innerHTML = "Please enter in a valid number of hours for hire"; //message on thw webpage to tell user to enter a valid boat hire length
+        document.getElementById("boatHireLengthError").innerHTML = "Please enter in a valid boat hire length"; //message on thw webpage to tell user to enter a valid boat hire length
         return;
     }
     if (timeSelect == null) { //checking that a time has been selected
@@ -97,20 +97,20 @@ var totalCost = 0; // creating variable for the total cost before any choices
     if (charterTime == 0) {
         /*If left blank, scrolls to a div just above it and displays the error message, uses return to force user to pick an option.*/
         document.getElementById("timeSelect").scrollIntoView();
-        document.getElementById("timeError").innerHTML = "Please select a time from the dropdown menu. Click on the input box to see the options.";
+        document.getElementById("timeError").innerHTML = "please select a time to go on the charter at";
         return;
     }
     document.getElementById("dateOutput").scrollIntoView(); //scrolls to the date output
 
         var firstName = checkPattern(firstNameInput, firstNameError, "Please enter a valid first name");
         if (firstName == true) {
-            alert("first name has been checked and recieved by checkdetails");
+            alert("first name has been checked in checkdetails");
             var firstNameOutput = document.getElementById("firstNameInput").value;
             alert("checked first name: " + firstNameOutput);
         }
         var lastName = checkPattern(lastNameInput, lastNameError, "Please enter a valid last name");
         if (lastName == true) {
-            alert("last name has been checked and recieved by checkdetails");
+            alert("last name has been checked and in checkdetails");
             var lastNameOutput = document.getElementById("lastNameInput").value;
             alert("checked last name: " + lastNameOutput);
         }
@@ -120,14 +120,14 @@ var totalCost = 0; // creating variable for the total cost before any choices
         return;
     }
 
-    var age = checkRange(ageInput, ageError, "Please enter a valid age. 25 years or older");
+    var age = checkRange(ageInput, ageError, "Please enter a valid age above 25");
     if (age == true) {
         var ageOutput = document.getElementById("ageInput").value;
         alert("Checked Age:" + ageOutput);
     } else {
         return;
     }
-    var license = checkPattern(licenseNumber, licenseError, "Please enter a valid New Zealand driver's license number");
+    var license = checkPattern(licenseNumber, licenseError, "Please enter a valid driver's license number");
     if (license == true) {
         var licenseOutput = document.getElementById("licenseNumber").value;
         alert("Checked License: " + licenseOutput);
@@ -141,7 +141,7 @@ var totalCost = 0; // creating variable for the total cost before any choices
     } else {
         return;
     }
-    var phoneNumber = checkPattern(cellphoneInput, cellphoneError, "Please enter in a current New Zealand mobile phone number.");
+    var phoneNumber = checkPattern(cellphoneInput, cellphoneError, "Please valid phone number.");
     if (phoneNumber == true) {
         var phoneOutput = document.getElementById("cellphoneInput").value;
         alert("Checked Phone: " + phoneOutput);
